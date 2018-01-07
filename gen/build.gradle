@@ -1,0 +1,5 @@
+apply plugin: "java"
+task execute(type: JavaExec) {
+    main = "com.elsahier.Jokes"
+    classpath = sourceSets.main.runtimeClasspath
+}
