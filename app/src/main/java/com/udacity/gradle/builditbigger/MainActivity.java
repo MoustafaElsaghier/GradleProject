@@ -41,13 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-//        Jokes j = new Jokes();
-//        Intent intent = new Intent(this, AndLibActivity.class);
-//        intent.putExtra("javaJoke", j.getJoke());
-//        startActivity(intent);
         new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
-
-//        Toast.makeText(this, "derp", Toast.LENGTH_SHORT).show();
     }
 
 
