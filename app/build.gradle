@@ -3,7 +3,8 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.2"
-
+    sourceCompatibility = "1.7"
+    targetCompatibility = "1.7"
     flavorDimensions "default"
 
     configurations.all {
