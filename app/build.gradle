@@ -4,6 +4,12 @@ android {
     compileSdkVersion 26
     buildToolsVersion "26.0.2"
 
+    flavorDimensions "default"
+
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
+
     defaultConfig {
         applicationId "com.udacity.gradle.builditbigger"
         minSdkVersion 16
@@ -18,15 +24,28 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-}
+    productFlavors {
+        free {
+            applicationId "com.example.udacity.declaringflavors.free"
+        }
+        paid {
+            applicationId "com.example.udacity.declaringflavors.paid"
+        }
+    }
 
+    dependencies {
+        compile fileTree(dir: 'libs', include: ['*.jar'])
+        androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+            exclude group: 'com.android.support', module: 'support-annotations'
+        })
+        compile 'com.android.support:appcompat-v7:26.1.0'
+        compile 'com.google.android.gms:play-services-ads:11.8.0'
+        compile project(':gen')
+        compile project(':androidlib2')
+    }
+}
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.google.android.gms:play-services-ads:11.8.0'
-    compile project(':gen')
-    compile project(':androidlib2')
+    compile 'com.google.http-client:google-http-client-android:1.23.0'
+    compile 'com.google.api-client:google-api-client:1.23.0'
+    compile project(path: ':backend')
 }
