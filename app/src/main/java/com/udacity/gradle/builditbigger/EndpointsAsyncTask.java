@@ -23,6 +23,8 @@ import elsaghier.example.com.androidlib.AndLibActivity;
 public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> {
     private static MyApi myApiService = null;
     private Context context;
+//    private JsonGetTaskListener mListener = null;
+//    private Exception mError = null;
 
     @Override
     protected String doInBackground(Pair<Context, String>... params) {
@@ -51,8 +53,10 @@ public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, S
         try {
             return myApiService.sayHi(name).execute().getData();
         } catch (IOException e) {
+//            mError = e;
             return e.getMessage();
         }
+
     }
 
     @Override
@@ -64,6 +68,19 @@ public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, S
     protected void onPostExecute(String result) {
         Intent intent = new Intent(context, AndLibActivity.class);
         intent.putExtra("javaJoke", result);
+
+//        if (this.mListener != null)
+//            this.mListener.onComplete(result, mError);
         context.startActivity(intent);
     }
+
+//    public EndpointsAsyncTask setListener(JsonGetTaskListener listener) {
+//        this.mListener = listener;
+//        return this;
+//    }
+//
+//    // for test
+//    public static interface JsonGetTaskListener {
+//        public void onComplete(String jsonString, Exception e);
+//    }
 }
