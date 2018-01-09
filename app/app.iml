@@ -194,5 +194,11 @@
     <orderEntry type="module" module-name="backend" />
     <orderEntry type="module" module-name="androidlib2" />
     <orderEntry type="module" module-name="gen" />
+    <orderEntry type="module" module-name="backend" />
+    <orderEntry type="module" module-name="androidlib2" />
+    <orderEntry type="module" module-name="gen" />
+    <orderEntry type="module" module-name="backend" />
+    <orderEntry type="module" module-name="androidlib2" />
+    <orderEntry type="module" module-name="gen" />
   </component>
 </module>
