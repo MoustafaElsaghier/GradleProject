@@ -6,7 +6,7 @@
 
     <application>
 
-        <activity android:name="com.declaringflavors.free.MainActivity"></activity>
+        <activity android:name="com.declaringflavors.free.MainActivity"/>
         <!-- Include the AdActivity configChanges and theme. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
