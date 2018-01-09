@@ -1,7 +1,9 @@
-package com.declaringflavors.free;
+package com.declaringflavors.paid;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import com.udacity.gradle.builditbigger.R;
 
 public class MainActivity extends AppCompatActivity {
 
