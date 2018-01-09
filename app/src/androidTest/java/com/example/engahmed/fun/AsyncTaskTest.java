@@ -2,7 +2,7 @@ package com.example.engahmed.fun;
 
 import android.support.test.runner.AndroidJUnit4;
 
-import com.udacity.gradle.builditbigger.EndpointsAsyncTask;
+import com.udacity.gradle.builditbigger.AsyncTaskPackage.EndpointsAsyncTask;
 
 import org.junit.Before;
 import org.junit.Test;

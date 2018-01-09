@@ -1,8 +1,10 @@
-package elsaghier.example.com.androidlib;
+package elsaghier.example.com.androidlib.Activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
+import elsaghier.example.com.androidlib.R;
 
 public class AndLibActivity extends AppCompatActivity {
 

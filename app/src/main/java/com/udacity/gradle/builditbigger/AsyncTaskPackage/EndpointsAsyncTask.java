@@ -1,4 +1,4 @@
-package com.udacity.gradle.builditbigger;
+package com.udacity.gradle.builditbigger.AsyncTaskPackage;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,7 +13,7 @@ import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
 
 import java.io.IOException;
 
-import elsaghier.example.com.androidlib.AndLibActivity;
+import elsaghier.example.com.androidlib.Activities.AndLibActivity;
 
 /**
  * Created by ELSaghier on 1/8/2018.
@@ -66,9 +66,10 @@ public class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        Intent intent = new Intent(context, AndLibActivity.class);
-        intent.putExtra("javaJoke", result);
-
-        context.startActivity(intent);
+        if (context != null) {
+            Intent intent = new Intent(context, AndLibActivity.class);
+            intent.putExtra("javaJoke", result);
+            context.startActivity(intent);
+        }
     }
 }

@@ -3,7 +3,7 @@
     package="elsaghier.example.com.androidlib">
 
     <application>
-        <activity android:name=".AndLibActivity"></activity>
+        <activity android:name=".Activities.AndLibActivity"></activity>
     </application>
 
 </manifest>
