@@ -22,6 +22,7 @@ import elsaghier.example.com.androidlib.Activities.AndLibActivity;
 public class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
     private static MyApi myApiService = null;
     private Context context;
+
     public EndpointsAsyncTask(Context context) {
         this.context = context;
     }
